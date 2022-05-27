@@ -1,0 +1,12 @@
+.list-tools-container {
+  padding: 3rem;
+  margin-bottom: 7rem;
+  background-color: inherit;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.btn-tools {
+  width: 100%;
+}
