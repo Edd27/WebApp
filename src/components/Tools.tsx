@@ -75,6 +75,7 @@ const Tools: React.FC<ToolsProps> = () => {
   }
 
   const handleNetworkInfo = async () => {
+    console.log('Obteniendo informacion de red')
     const status = await Network.getStatus()
     const { connected, connectionType } = status
     await Toast.show({
@@ -87,40 +88,20 @@ const Tools: React.FC<ToolsProps> = () => {
   return (
     <IonList className='list-tools-container'>
       <IonTitle>Plugins</IonTitle>
-      <IonButton className='btn-tools'>
-        <IonIcon
-          slot='icon-only'
-          icon={wifi}
-          onClick={handleNetworkInfo}
-        ></IonIcon>
+      <IonButton className='btn-tools' onClick={handleNetworkInfo}>
+        <IonIcon slot='icon-only' icon={wifi}></IonIcon>
       </IonButton>
-      <IonButton className='btn-tools'>
-        <IonIcon
-          slot='icon-only'
-          icon={batteryFull}
-          onClick={handleBatteryInfo}
-        ></IonIcon>
+      <IonButton className='btn-tools' onClick={handleBatteryInfo}>
+        <IonIcon slot='icon-only' icon={batteryFull}></IonIcon>
       </IonButton>
-      <IonButton className='btn-tools'>
-        <IonIcon
-          slot='icon-only'
-          icon={shareSocial}
-          onClick={handleShare}
-        ></IonIcon>
+      <IonButton className='btn-tools' onClick={handleShare}>
+        <IonIcon slot='icon-only' icon={shareSocial}></IonIcon>
       </IonButton>
-      <IonButton className='btn-tools'>
-        <IonIcon
-          slot='icon-only'
-          icon={notifications}
-          onClick={handleToast}
-        ></IonIcon>
+      <IonButton className='btn-tools' onClick={handleToast}>
+        <IonIcon slot='icon-only' icon={notifications}></IonIcon>
       </IonButton>
-      <IonButton className='btn-tools'>
-        <IonIcon
-          slot='icon-only'
-          icon={menu}
-          onClick={handleActionSheet}
-        ></IonIcon>
+      <IonButton className='btn-tools' onClick={handleActionSheet}>
+        <IonIcon slot='icon-only' icon={menu}></IonIcon>
       </IonButton>
       <IonButton className='btn-tools' onClick={handleClipboard}>
         <IonIcon slot='icon-only' icon={clipboard}></IonIcon>
