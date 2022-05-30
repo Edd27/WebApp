@@ -22,7 +22,7 @@ const Tools: React.FC<ToolsProps> = () => {
     await Clipboard.write({
       string: 'Hello World!'
     })
-    console.log('Copied to clipboard')
+
     await Toast.show({
       text: 'Copied to clipboard'
     })
@@ -93,34 +93,38 @@ const Tools: React.FC<ToolsProps> = () => {
         <IonIcon
           slot='icon-only'
           icon={wifi}
-          onClick={logCurrentNetworkStatus}
+          onClick={() => logCurrentNetworkStatus()}
         ></IonIcon>
       </IonButton>
       <IonButton className='btn-tools'>
         <IonIcon
           slot='icon-only'
           icon={batteryFull}
-          onClick={logBatteryInfo}
+          onClick={() => logBatteryInfo()}
         ></IonIcon>
       </IonButton>
       <IonButton className='btn-tools'>
         <IonIcon
           slot='icon-only'
           icon={shareSocial}
-          onClick={showShare}
+          onClick={() => showShare()}
         ></IonIcon>
       </IonButton>
       <IonButton className='btn-tools'>
         <IonIcon
           slot='icon-only'
           icon={notifications}
-          onClick={showToast}
+          onClick={() => showToast()}
         ></IonIcon>
       </IonButton>
       <IonButton className='btn-tools'>
-        <IonIcon slot='icon-only' icon={menu} onClick={showActions}></IonIcon>
+        <IonIcon
+          slot='icon-only'
+          icon={menu}
+          onClick={() => showActions()}
+        ></IonIcon>
       </IonButton>
-      <IonButton className='btn-tools' onClick={writeToClipboard}>
+      <IonButton className='btn-tools' onClick={() => writeToClipboard()}>
         <IonIcon slot='icon-only' icon={clipboard}></IonIcon>
       </IonButton>
     </IonList>
