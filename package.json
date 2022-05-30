@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@capacitor/action-sheet": "1.0.8",
+    "@capacitor/android": "3.5.1",
     "@capacitor/app": "1.1.1",
     "@capacitor/clipboard": "1.0.8",
     "@capacitor/core": "3.5.1",
